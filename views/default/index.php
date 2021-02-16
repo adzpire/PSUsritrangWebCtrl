@@ -1,5 +1,5 @@
 <?php
-use app\modules\webcontrol\components\PanelLinkWidget;
+use app\modules\psusritrangwebctrl\components\PanelLinkWidget;
 use yii\helpers\Url;
 use yii\bootstrap\Html;
 ?>
@@ -10,7 +10,7 @@ use yii\bootstrap\Html;
     ],
     'items' => [
         ['label' => 'จัดการด่วน', 'icon' => 'forward', 'url' => ['ctrl/zone']],
-        ['label' => 'จัดการ', 'icon' => 'play', 'url' => ['ctrl/']],        
+        ['label' => 'ประวัติ', 'icon' => 'info-sign', 'url' => ['ctrl/']],        
         ['label' => 'user', 'icon' => 'user', 'url' => ['user/']],        
         ['label' => 'รายงาน', 'icon' => 'stats', 'url' => ['report/']],        
     ],

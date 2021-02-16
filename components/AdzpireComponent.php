@@ -1,5 +1,5 @@
 <?php
-namespace app\modules\webcontrol\components;
+namespace app\modules\psusritrangwebctrl\components;
 
 use Yii;
 use yii\base\Component;

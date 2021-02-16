@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\webcontrol;
+namespace app\modules\psusritrangwebctrl;
 
 /**
  * branch module definition class
@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'app\modules\webcontrol\controllers';
+    public $controllerNamespace = 'app\modules\psusritrangwebctrl\controllers';
 
     /**
      * @inheritdoc

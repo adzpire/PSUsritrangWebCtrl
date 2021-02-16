@@ -1,5 +1,5 @@
 <?php
-namespace app\modules\webcontrol\models;
+namespace app\modules\psusritrangwebctrl\models;
 
 use Yii;
 

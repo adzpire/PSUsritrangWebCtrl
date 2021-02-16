@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\webcontrol\models;
+namespace app\modules\psusritrangwebctrl\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;

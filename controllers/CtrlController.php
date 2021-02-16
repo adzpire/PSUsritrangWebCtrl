@@ -1,13 +1,13 @@
 <?php
 
-namespace app\modules\webcontrol\controllers;
+namespace app\modules\psusritrangwebctrl\controllers;
 
 use Yii;
-use app\modules\webcontrol\models\ControlHistory;
-use app\modules\webcontrol\models\ShellData;
-use app\modules\webcontrol\models\ControlHistorySearch;
+use app\modules\psusritrangwebctrl\models\ControlHistory;
+use app\modules\psusritrangwebctrl\models\ShellData;
+use app\modules\psusritrangwebctrl\models\ControlHistorySearch;
 
-use app\modules\webcontrol\components\AdzpireComponent;
+use app\modules\psusritrangwebctrl\components\AdzpireComponent;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

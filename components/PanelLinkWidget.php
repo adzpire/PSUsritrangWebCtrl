@@ -5,7 +5,7 @@
  * Date: 14/10/2559
  * Time: 14:49 
  */
-namespace app\modules\webcontrol\components;
+namespace app\modules\psusritrangwebctrl\components;
 use Yii;
 use yii\base\Widget;
 use yii\web\JqueryAsset;

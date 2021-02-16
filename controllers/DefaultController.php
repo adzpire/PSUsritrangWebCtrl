@@ -1,17 +1,15 @@
 <?php
 
-namespace app\modules\webcontrol\controllers;
+namespace app\modules\psusritrangwebctrl\controllers;
 
 use Yii;
-// use backend\modules\webcontrol\models\Branch;
-// use backend\modules\branch\models\BranchSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use app\modules\webcontrol\components\AdzpireComponent;
+use app\modules\psusritrangwebctrl\components\AdzpireComponent;
 use yii\helpers\Url;
-use app\modules\webcontrol\models\LoginForm;
+use app\modules\psusritrangwebctrl\models\LoginForm;
 /**
  * DefaultController implements the CRUD actions for Branch model.
  */
