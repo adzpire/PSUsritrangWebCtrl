@@ -58,16 +58,16 @@ class ShellData extends Model
     /**
      * Sends an email to the specified email address using the information collected by this model.
      * @param string $email the target email address
-     * @return bool whether the model passes validation
+     * @return bool whether the model passes validation 
      */
     public function getZonearray(){
-		$tmp = shell_exec('bash /var/www/basic/views/ctrl/zone.sh 2>&1');
+		$tmp = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/zone.sh 2>&1');
 		$arrZone = explode(" ",$tmp);
 		
 		return $arrZone;
 	}
 	public function getPcarray($zone){
-		$tmp = shell_exec('bash /var/www/basic/views/ctrl/first.sh '.$zone.' 2>&1');
+		$tmp = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/first.sh '.$zone.' 2>&1');
 		$arrtmp = explode("<>",$tmp);
 		$trimtmp = trim($arrtmp[5]);
 		$trimedtmp = rtrim($trimtmp," off ");

@@ -210,7 +210,7 @@ class CtrlController extends Controller
 		$this->addhistory([$zone, $pclist, $job['name']]);		
 		
 		$this->gentmp($tmpid, $text);
-		$exectmp3 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' 2>&1');
+		$exectmp3 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' 2>&1');
 		//echo shell_exec('whoami');
 		//echo 'bash /var/www/basic/views/ctrl/'.$prog.' '.$tmp5.' '.$time.' 2>&1';
 		// var_dump($exectmp3);
@@ -244,7 +244,7 @@ class CtrlController extends Controller
 		// $tmp5 = '/tmp/bootmenu-temp5.'.Yii::$app->request->post()['tmpid'];		
 		// $exectmp = shell_exec('echo "'.$text.'" > '.$tmp1);
 		// $exectmp2 = shell_exec('bash /var/www/basic/views/ctrl/second.sh '.$tmp1.' '.$tmp4.' '.$tmp5.' '.Yii::$app->request->post()['time'].' 2>&1');
-		$exectmp3 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' 2>&1');
+		$exectmp3 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' 2>&1');
 		$this->cleantmp($tmpid);
 		
 		AdzpireComponent::succalert('alert', 'restart pc: '.$pclist.' completed!!');
@@ -268,7 +268,7 @@ class CtrlController extends Controller
 		
 		$execmessage = shell_exec('echo "'.$message.'" > /tmp/bootmenu-temp3.'.$tmpid);
 		
-		$exectmp3 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' /tmp/bootmenu-temp3.'.$tmpid.' 2>&1');
+		$exectmp3 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$time.' /tmp/bootmenu-temp3.'.$tmpid.' 2>&1');
 		
 		AdzpireComponent::succalert('alert', 'send message pc: '.$pclist.'  completed!!');
 		
@@ -288,7 +288,7 @@ class CtrlController extends Controller
 		
 		$this->gentmp($tmpid, $text);
 		
-		$exectmp3 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' 2>&1');
+		$exectmp3 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' 2>&1');
 		
 		AdzpireComponent::succalert('alert', 'WoL pc: '.$pclist.' completed!!');
 		
@@ -311,7 +311,7 @@ class CtrlController extends Controller
 		//echo 'bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.Yii::$app->request->post()['zone'].' 2>&1';
 		$exectmp = shell_exec('cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.$(date +%F-%H%M%S)');
 		//var_dump($exectmp);
-		$exectmp1 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$zone.' 2>&1');
+		$exectmp1 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$zone.' 2>&1');
 		$exectmp2 = shell_exec('sudo service isc-dhcp-server restart 2>&1');
 		
 		AdzpireComponent::succalert('alert', 'stop network pc: '.$pclist.'  completed!!');
@@ -340,7 +340,7 @@ class CtrlController extends Controller
 		$this->gentmp($tmpid, $text);
 		
 		$exectmp = shell_exec('cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.$(date +%F-%H%M%S)');
-		$exectmp1 = shell_exec('bash /var/www/basic/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$zone.' 2>&1');
+		$exectmp1 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/'.$prog.' /tmp/bootmenu-temp5.'.$tmpid.' '.$zone.' 2>&1');
 		$exectmp2 = shell_exec('sudo service isc-dhcp-server restart 2>&1');
 		
 		AdzpireComponent::succalert('alert', 'start network pc: '.$pclist.'  completed!!');
@@ -354,7 +354,7 @@ class CtrlController extends Controller
 		$tmp4 = '/tmp/bootmenu-temp4.'.$id;
 		$tmp5 = '/tmp/bootmenu-temp5.'.$id;		
 		$exectmp = shell_exec('echo "'.$text.'" > '.$tmp1);
-		$exectmp2 = shell_exec('bash /var/www/basic/views/ctrl/second.sh '.$tmp1.' '.$tmp4.' '.$tmp5.' 2>&1');
+		$exectmp2 = shell_exec('bash '.Yii::getAlias('@app').'/modules/psusritrangwebctrl/views/ctrl/second.sh '.$tmp1.' '.$tmp4.' '.$tmp5.' 2>&1');
 	}
 	protected function cleantmp($id){
 		$exec = shell_exec('rm -f /tmp/bootmenu-temp*.'.$id.' 2>&1');

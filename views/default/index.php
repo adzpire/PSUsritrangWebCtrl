@@ -11,7 +11,7 @@ use yii\bootstrap\Html;
     'items' => [
         ['label' => 'จัดการด่วน', 'icon' => 'forward', 'url' => ['ctrl/zone']],
         ['label' => 'ประวัติ', 'icon' => 'info-sign', 'url' => ['ctrl/']],        
-        ['label' => 'user', 'icon' => 'user', 'url' => ['user/']],        
+        ['label' => 'เจ้าหน้าที่', 'icon' => 'user', 'url' => ['user/']],        
         ['label' => 'รายงาน', 'icon' => 'stats', 'url' => ['report/']],        
     ],
 ]); ?>
